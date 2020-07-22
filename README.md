@@ -1,27 +1,21 @@
 # RedditPhoto
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
+An Angular 9 App (with Bootstrap 4 css) that get Photos from 5 different subreddits:- 
+ 1. Astro Photography
+ 2. Street Photography
+ 3. Mobile Photography
+ 4. Exposure 
+ 5. Village
+and 4 parameters:-
+ 1. Top
+ 2. Hot
+ 3. Rising
+ 4. New
 
-## Development server
+## Important Commands
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+``` npm install ``` to get all the packages
 
-## Code scaffolding
+``` npm start ``` to open the project in browser (in devlopment mode)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+``` npm run build ``` to build the project

@@ -1,0 +1,19 @@
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+    <div class="col" *ngFor="let val of dataArray">
+      <div class="card">
+        <img [src]="val.data.url" class="card-img-top" [alt]="val.data.title">
+        <div class="card-body">
+          <h5 class="card-title">{{val.data.title}}</h5>
+          <p class="card-text">
+            <strong> Photo By:</strong> {{val.data.author}}
+          </p>
+          <p class="card-text">
+            <strong> Ups:</strong> {{val.data.ups}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
