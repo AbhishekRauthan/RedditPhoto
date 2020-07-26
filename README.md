@@ -19,3 +19,4 @@ and 4 parameters:-
 ``` npm start ``` to open the project in browser (in devlopment mode)
 
 ``` npm run build ``` to build the project
+

@@ -1,48 +1,39 @@
-<div class="container-fluid">
-  <div class="row justify-content-around">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-8 align-self-center">
-      <h1 class="display-3">Reddit Photo App</h1>
+<section class="text-gray-700 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-12">
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Reddit Photo App</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+        Get Photos ranging from amatuers to professionals, on various genres ranging from astrophotography to street,
+        just select the subreddit and a parameter and get all the great photos.
+      </p>
     </div>
-    <div class="col-sm-2"></div>
-  </div>
-</div>
-<form [formGroup]="inputForm" (ngSubmit)="onSubmit()" class="container-fluid">
-  <div class="form-row">
-    <div class="col-2">
-      <app-modal></app-modal>
-    </div>
-    <div class="col-8 align-self-center">
-      <div class="input-group mb-3">
-        <select class="custom-select" id="inputGroupSelect02" formControlName="subreddit">
-          <option selected>Select Reddit...</option>
-          <option *ngFor="let data of subredditArray">
-            {{data}}
-          </option>
-        </select>
-      </div>
-    </div>
-    <div class="col-2">
-      <div class="input-group mb-3">
-        <select class="custom-select" id="inputGroupSelect02" formControlName="params">
-          <option selected>Select Params...</option>
-          <option *ngFor="let data of params">
-            {{data}}
-          </option>
-        </select>
-      </div>
-    </div>
-  </div>
-  <div class="row justify-content-center">
-    <div class="col"></div>
-    <div class="col align-self-center">
-      <button [disabled]="disableButton()" class="btn btn-primary">
+    <form [formGroup]="inputForm" (ngSubmit)="onSubmit()"
+      class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:px-0">
+      <select
+        class="flex-grow w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mr-4 mb-4 sm:mb-0"
+        formControlName="subreddit"
+      >
+        <option selected>Select Reddit...</option>
+        <option *ngFor="let data of subredditArray">
+          {{data}}
+        </option>
+      </select>
+      <select
+        class="flex-grow w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2 mr-4 mb-4 sm:mb-0"
+        formControlName="params"  
+      >
+        <option selected>Select Params...</option>
+        <option *ngFor="let data of params">
+          {{data}}
+        </option>
+      </select>
+      <button [disabled]="disableButton()"
+        class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
         Get Photos
       </button>
-    </div>
-    <div class="col"></div>
+    </form>
   </div>
-</form>
+</section>
 
 <ng-container *ngIf="param && subreddit">
   <app-photo-card [selected]="returnTerm()" [param]="returnParam()"></app-photo-card>
