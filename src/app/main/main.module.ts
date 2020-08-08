@@ -5,11 +5,11 @@ import { SelectRedditComponent } from './select-reddit/select-reddit.component';
 import { HttpClientModule } from "@angular/common/http";
 import { InstructModule } from '../instruct/instruct.module';
 import { ReactiveFormsModule } from "@angular/forms";
-import { HeadingComponent } from './heading/heading.component';
+
 
 
 @NgModule({
-  declarations: [PhotoCardComponent, SelectRedditComponent, HeadingComponent],
+  declarations: [PhotoCardComponent, SelectRedditComponent],
   imports: [
     CommonModule,
     HttpClientModule,
