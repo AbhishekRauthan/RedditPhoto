@@ -1,3 +1,6 @@
+@import '~bulma/css/bulma.css';
+
 * {
   overflow-x: hidden;
+  overflow-y: hidden;
 }
